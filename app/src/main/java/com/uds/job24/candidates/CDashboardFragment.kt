@@ -16,7 +16,7 @@ import com.uds.job24.candidates.adapter.CJobAdapter
 import com.uds.job24.candidates.callback.CCallback
 import com.uds.job24.candidates.model.CJobList
 import com.uds.job24.candidates.viewmodel.CDashboardViewModel
-import com.uds.job24.common.utils.Loadinddialog
+import com.uds.job24.common.utils.CustomLoadingDialog
 import com.uds.job24.common.utils.UserPreferences
 import com.uds.job24.databinding.FragmentCDashboardBinding
 import kotlinx.coroutines.launch
@@ -33,7 +33,7 @@ class CDashboardFragment : Fragment(), CCallback {
     private lateinit var viewModel: CDashboardViewModel
     private var userPreferences: UserPreferences? = null
 
-    private lateinit var dialog: Loadinddialog
+    private lateinit var dialog: CustomLoadingDialog
     private lateinit var appliedList: ArrayList<CJobList.Datum>
 
     private var currentid: String = ""
@@ -49,7 +49,7 @@ class CDashboardFragment : Fragment(), CCallback {
     }
 
     private fun init() {
-        dialog = Loadinddialog()
+        dialog = CustomLoadingDialog()
         appliedList = ArrayList()
         userPreferences = UserPreferences(requireContext())
         viewModel = ViewModelProvider(this).get(CDashboardViewModel::class.java)

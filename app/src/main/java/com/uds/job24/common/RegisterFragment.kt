@@ -12,7 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.Navigation
 import com.uds.job24.R
-import com.uds.job24.common.utils.Loadinddialog
+import com.uds.job24.common.utils.CustomLoadingDialog
 import com.uds.job24.common.utils.UserPreferences
 import com.uds.job24.common.viewModel.CommonViewModel
 import com.uds.job24.databinding.FragmentRegisterBinding
@@ -25,7 +25,7 @@ class RegisterFragment : Fragment() {
     private lateinit var viewModel: CommonViewModel
     private var userPreferences: UserPreferences? = null
 
-    private lateinit var dialog: Loadinddialog
+    private lateinit var dialog: CustomLoadingDialog
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,16 +38,16 @@ class RegisterFragment : Fragment() {
     }
 
     private fun init() {
-        dialog = Loadinddialog()
+        dialog = CustomLoadingDialog()
         userPreferences = UserPreferences(requireContext())
         viewModel = ViewModelProvider(this).get(CommonViewModel::class.java)
 
         binding.apply {
-            btnSubmit.setOnClickListener {
+            registerBtn.setOnClickListener {
                 validate()
             }
-            txtLogin.setOnClickListener {
-                Navigation.findNavController(btnSubmit)
+            registerBtn.setOnClickListener {
+                Navigation.findNavController(registerBtn)
                     .navigate(R.id.nav_login)
             }
         }
@@ -106,7 +106,7 @@ class RegisterFragment : Fragment() {
                                     userPreferences!!.saveAuthtoke(it?.data?.token ?: "")
                                     userPreferences!!.saveid(it?.data?.id ?: "")
                                     userPreferences!!.saverole(it?.data?.userRole ?: -1)
-                                    Navigation.findNavController(btnSubmit)
+                                    Navigation.findNavController(registerBtn)
                                         .navigate(R.id.nav_login)
                                 }
                             }else if (it?.code ?: 0 == 422){

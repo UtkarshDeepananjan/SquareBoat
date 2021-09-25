@@ -9,7 +9,7 @@ import android.view.animation.RotateAnimation
 import android.widget.ImageView
 import com.uds.job24.R
 
-class Loadinddialog {
+class CustomLoadingDialog {
 
     private var dialogLoader: Dialog? =null
 

@@ -7,12 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.Navigation
 import com.uds.job24.R
-import com.uds.job24.common.utils.Loadinddialog
+import com.uds.job24.common.utils.CustomLoadingDialog
 import com.uds.job24.common.utils.UserPreferences
 import com.uds.job24.common.viewModel.CommonViewModel
 import com.uds.job24.databinding.FragmentLoginBinding
@@ -25,7 +24,7 @@ class LoginFragment : Fragment() {
     private lateinit var viewModel: CommonViewModel
     private var userPreferences: UserPreferences? = null
 
-    private lateinit var dialog: Loadinddialog
+    private lateinit var dialog: CustomLoadingDialog
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,12 +36,13 @@ class LoginFragment : Fragment() {
         return binding.root
     }
     private fun init(){
-        dialog = Loadinddialog()
+        dialog = CustomLoadingDialog()
         userPreferences = UserPreferences(requireContext())
         viewModel = ViewModelProvider(this).get(CommonViewModel::class.java)
 
         binding.apply {
-            btnSubmit.setOnClickListener {
+            tvRegister.setOnClickListener { Navigation.findNavController(tvRegister).navigate(R.id.nav_Register) }
+            loginBtn.setOnClickListener {
                 validate()
             }
         }
@@ -77,8 +77,7 @@ class LoginFragment : Fragment() {
                         password = edtPass.text.toString()
                     )
                     viewModel.responseLogin.observe(viewLifecycleOwner,
-                        Observer {
-
+                        {
                             if (dialog.isShowing())
                                 dialog.dismiss()
                             if (it?.code ?: 0 == 200) {
@@ -89,10 +88,10 @@ class LoginFragment : Fragment() {
                                         userPreferences!!.saverole(it.data.userRole ?: -1)
 
                                         if (it.data.userRole ?: -1 == 0)
-                                            Navigation.findNavController(btnSubmit)
+                                            Navigation.findNavController(binding.loginBtn)
                                                 .navigate(R.id.action_nav_login_to_nav_rdashboard)
                                         else if (it.data.userRole ?: -1 == 1)
-                                            Navigation.findNavController(btnSubmit)
+                                            Navigation.findNavController(binding.loginBtn)
                                                 .navigate(R.id.action_nav_login_to_nav_cdashboard)
                                     }
                                 }
