@@ -40,6 +40,9 @@ class MainActivity : AppCompatActivity() {
             R.id.nav_cdashboard -> {
 
             }
+            R.id.nav_login -> {
+
+            }
             else -> {
                 super.onBackPressed()
             }

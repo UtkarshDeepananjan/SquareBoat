@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.antino.job24.R
 import com.antino.job24.common.utils.Loadinddialog
+import com.antino.job24.common.utils.UserPreferences
 import com.antino.job24.databinding.FragmentRecruiterDashboardBinding
 import com.antino.job24.databinding.RecruiterJobPostsListBinding
 import com.antino.job24.recruiters.adapter.RecruiterJobPostAdapter
@@ -29,6 +30,7 @@ class RecruiterDashboardFragment : Fragment(), JobListItemClickListener {
     private lateinit var dialog: Loadinddialog
     private lateinit var viewModel: RDashboardViewModel
     var adapter=RecruiterJobPostAdapter(arrayListOf(),this)
+    private var userPreferences: UserPreferences? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,9 +43,17 @@ class RecruiterDashboardFragment : Fragment(), JobListItemClickListener {
 
     private fun init() {
         dialog = Loadinddialog()
+        userPreferences = UserPreferences(requireContext())
         viewModel = ViewModelProvider(this).get(RDashboardViewModel::class.java)
 
         binding.apply {
+            ivLogout.setOnClickListener {
+                lifecycleScope.launch {
+                userPreferences!!.clearDatastore()
+                }
+                Navigation.findNavController(binding.postJob)
+                    .navigate(R.id.nav_login)
+            }
             postJob.setOnClickListener {
 
                 Navigation.findNavController(binding.postJob)

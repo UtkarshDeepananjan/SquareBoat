@@ -23,4 +23,5 @@
     <string name="post_job">Post Job</string>
     <string name="noapplicant">No applicant</string>
     <string name="label_job_posted">Job Posted</string>
+    <string name="label_applicable_job">Applicable job</string>
 </resources>

@@ -60,6 +60,13 @@ class CDashboardFragment : Fragment(), CCallback {
         viewModel = ViewModelProvider(this).get(CDashboardViewModel::class.java)
 
         binding.apply {
+            ivLogout.setOnClickListener {
+                lifecycleScope.launch {
+                    userPreferences!!.clearDatastore()
+                }
+                Navigation.findNavController(binding.recListJob)
+                    .navigate(R.id.nav_login)
+            }
             recListJob.apply {
                 setHasFixedSize(true)
                 layoutManager =
