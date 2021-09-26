@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="account_type">
+        <item>Role</item>
+        <item>Job Seeker</item>
+        <item>Recruiter</item>
+    </string-array>
+</resources>

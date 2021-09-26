@@ -3,9 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <!--  <variable
-              name="itemdata"
-              type="com.antino.eggozecommerce.network.model.Products.Result"/>-->
     </data>
 
     <androidx.cardview.widget.CardView

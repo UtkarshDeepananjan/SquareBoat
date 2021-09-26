@@ -8,6 +8,7 @@
     </data>
 
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -150,19 +151,19 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/s60"
             android:layout_marginStart="@dimen/s54"
-            android:layout_marginTop="@dimen/s45"
+            android:layout_marginTop="45dp"
             android:layout_marginEnd="@dimen/s54"
+            android:text="@string/register"
+            app:backgroundTint="#3D5AFE"
             app:cardUseCompatPadding="true"
             app:cornerRadius="@dimen/s16"
-            app:backgroundTint="#3D5AFE"
-            android:text="@string/register"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/edt_con_pass_layout"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edt_con_pass_layout">
-
+            app:layout_constraintTop_toBottomOf="@+id/role_rg"
+            app:layout_constraintVertical_bias="0.39">
 
 
         </Button>
@@ -178,6 +179,33 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/register_btn" />
+
+        <RadioGroup
+            android:id="@+id/role_rg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:checkedButton="@id/job_seeker_rb"
+            app:layout_constraintEnd_toEndOf="@+id/edt_con_pass_layout"
+            app:layout_constraintStart_toStartOf="@+id/edt_con_pass_layout"
+            app:layout_constraintTop_toBottomOf="@+id/edt_con_pass_layout" >
+
+            <RadioButton
+                android:id="@+id/job_seeker_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/s8"
+                android:text="Job Seeker" />
+
+            <RadioButton
+                android:id="@+id/recruiter_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/s8"
+                android:text="Recruiter" />
+
+        </RadioGroup>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

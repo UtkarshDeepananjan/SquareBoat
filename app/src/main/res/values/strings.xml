@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">JobiFy</string>
+    <string name="app_name">Job24</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="enter_your_email">Enter your Email</string>
@@ -9,7 +9,18 @@
     <string name="enter_your_password_again">Conform Your Password</string>
     <string name="login">Login</string>
     <string name="already_user_login"><u>Already a User Login</u></string>
-    <string name="register_user"><u>Register User</u></string>
+    <string name="registeruser"><u>Register User</u></string>
     <string name="apply">Apply</string>
     <string name="applied">Already Applied</string>
+    <string name="view">View Detail</string>
+    <string name="removejob">Remove Job</string>
+    <string name="title">Title</string>
+    <string name="enter_title">Enter title</string>
+    <string name="description">Description</string>
+    <string name="enter_description">Enter description</string>
+    <string name="location">Location</string>
+    <string name="enter_location">Enter Location</string>
+    <string name="post_job">Post Job</string>
+    <string name="noapplicant">No applicant</string>
+    <string name="label_job_posted">Job Posted</string>
 </resources>

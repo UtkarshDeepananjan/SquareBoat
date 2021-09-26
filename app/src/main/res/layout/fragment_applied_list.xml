@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".recruiters.AppliedListFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/s48"
+                android:background="@color/app_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/btn_back"
+                    android:layout_width="@dimen/s34"
+                    android:layout_height="@dimen/s48"
+                    android:layout_marginStart="@dimen/s8"
+                    android:layout_marginLeft="@dimen/s8"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/jobdetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/s12"
+                    android:layout_marginLeft="@dimen/s12"
+                    android:layout_marginTop="@dimen/s12"
+                    android:layout_marginEnd="@dimen/s12"
+                    android:layout_marginRight="@dimen/s12"
+                    android:text="@string/enter_your_name"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/s12"
+                    android:layout_marginLeft="@dimen/s12"
+                    android:layout_marginTop="@dimen/s4"
+                    android:layout_marginEnd="@dimen/s12"
+                    android:layout_marginRight="@dimen/s12"
+                    android:text="@string/enter_your_name"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+                <ImageView
+                    android:id="@+id/imgloc"
+                    android:layout_width="@dimen/s24"
+                    android:layout_height="@dimen/s24"
+                    android:layout_marginStart="@dimen/s12"
+                    android:layout_marginLeft="@dimen/s12"
+                    android:layout_marginTop="@dimen/s8"
+                    android:src="@drawable/ic_baseline_location_on_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_des" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_loc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/s4"
+                    android:layout_marginLeft="@dimen/s4"
+                    android:layout_marginTop="@dimen/s8"
+                    android:layout_marginEnd="@dimen/s12"
+                    android:layout_marginRight="@dimen/s12"
+                    android:text="@string/enter_your_name"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imgloc"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_des" />
+
+                <ImageView
+                    android:id="@+id/imgdate"
+                    android:layout_width="@dimen/s24"
+                    android:layout_height="@dimen/s24"
+                    android:layout_marginEnd="@dimen/s12"
+                    android:layout_marginRight="@dimen/s12"
+                    android:src="@drawable/ic_baseline_calendar_today_24"
+                    app:layout_constraintEnd_toStartOf="@+id/txt_date"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_loc" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/s4"
+                    android:layout_marginLeft="@dimen/s4"
+                    android:layout_marginEnd="@dimen/s12"
+                    android:layout_marginRight="@dimen/s12"
+                    android:layout_marginBottom="@dimen/s12"
+                    android:text="@string/enter_your_name"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_loc" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_noapplicant"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/s20"
+                android:text="@string/noapplicant"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/jobdetail" />
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_applied_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/jobdetail"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

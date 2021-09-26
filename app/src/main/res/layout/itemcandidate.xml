@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/caradcont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/s12"
+        android:layout_marginEnd="@dimen/s12"
+        app:cardCornerRadius="@dimen/s20"
+        android:background="@color/white"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginTop="@dimen/s12"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/s12"
+        app:layout_constraintWidth_percent="0.5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/s12"
+                android:layout_marginLeft="@dimen/s12"
+                android:layout_marginEnd="@dimen/s12"
+                android:layout_marginRight="@dimen/s12"
+                android:layout_marginTop="@dimen/s12"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="@string/enter_your_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgloc"
+                android:layout_width="@dimen/s24"
+                android:layout_height="@dimen/s24"
+                android:src="@drawable/ic_baseline_email_24"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/s12"
+                android:layout_marginLeft="@dimen/s12"
+                android:layout_marginTop="@dimen/s8"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/s4"
+                android:layout_marginLeft="@dimen/s4"
+                android:layout_marginEnd="@dimen/s12"
+                android:layout_marginRight="@dimen/s12"
+                android:layout_marginTop="@dimen/s8"
+                android:textColor="@color/black"
+                android:text="@string/enter_your_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgloc"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+            <ImageView
+                android:id="@+id/imgdate"
+                android:layout_width="@dimen/s24"
+                android:layout_height="@dimen/s24"
+                android:src="@drawable/ic_baseline_file_copy_24"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/s12"
+                android:layout_marginLeft="@dimen/s12"
+                android:layout_marginTop="@dimen/s8"
+                app:layout_constraintTop_toBottomOf="@+id/txt_email"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_skill"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/s4"
+                android:layout_marginLeft="@dimen/s4"
+                android:layout_marginEnd="@dimen/s12"
+                android:layout_marginRight="@dimen/s12"
+                android:layout_marginTop="@dimen/s8"
+                android:textColor="@color/black"
+                android:text="@string/enter_your_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgloc"
+                app:layout_constraintTop_toBottomOf="@+id/txt_email"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/s12"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -6,36 +6,49 @@
     app:startDestination="@+id/nav_splash">
     <fragment
         android:id="@+id/nav_splash"
-        android:name="com.uds.job24.common.SplashFragment"
+        android:name="com.antino.job24.common.SplashFragment"
         android:label="@string/register"
-        tools:layout="@layout/fragment_splash" />
+        tools:layout="@layout/fragment_splash"/>
     <fragment
         android:id="@+id/nav_Register"
-        android:name="com.uds.job24.common.RegisterFragment"
+        android:name="com.antino.job24.common.RegisterFragment"
         android:label="@string/register"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register"/>
     <fragment
         android:id="@+id/nav_login"
-        android:name="com.uds.job24.common.LoginFragment"
+        android:name="com.antino.job24.common.LoginFragment"
         android:label="@string/register"
         tools:layout="@layout/fragment_login">
-        <action
-            android:id="@+id/action_nav_login_to_nav_cdashboard"
-            app:destination="@+id/nav_cdashboard" />
-        <action
-            android:id="@+id/action_nav_login_to_nav_rdashboard"
-            app:destination="@+id/nav_rdashboard" />
+        <action android:id="@+id/action_nav_login_to_nav_cdashboard"
+            app:destination="@+id/nav_cdashboard"/>
+        <action android:id="@+id/action_nav_login_to_nav_rdashboard"
+            app:destination="@+id/nav_rdashboard"/>
 
     </fragment>
     <fragment
         android:id="@+id/nav_cdashboard"
-        android:name="com.uds.job24.candidates.CDashboardFragment"
+        android:name="com.antino.job24.candidates.CDashboardFragment"
         android:label="@string/register"
-        tools:layout="@layout/fragment_c_dashboard" />
+        tools:layout="@layout/fragment_c_dashboard"/>
+    <fragment
+        android:id="@+id/nav_createjob"
+        android:name="com.antino.job24.recruiters.CreateJobFragment"
+        android:label="@string/register"
+        tools:layout="@layout/fragment_create_job"/>
+    <fragment
+        android:id="@+id/nav_appliedlist"
+        android:name="com.antino.job24.recruiters.AppliedListFragment"
+        android:label="@string/register"
+        tools:layout="@layout/fragment_applied_list"/>
     <fragment
         android:id="@+id/nav_rdashboard"
-        android:name="com.uds.job24.recruiters.RDashboardFragment"
+        android:name="com.antino.job24.recruiters.RecruiterDashboardFragment"
         android:label="@string/register"
-        tools:layout="@layout/fragment_r_dashboard" />
+        tools:layout="@layout/fragment_recruiter_dashboard">
+        <action android:id="@+id/action_nav_rdashboard_to_nav_createjob"
+            app:destination="@+id/nav_createjob"/>
+        <action android:id="@+id/action_nav_rdashboard_to_nav_appliedlist"
+            app:destination="@+id/nav_appliedlist"/>
+    </fragment>
 
 </navigation>

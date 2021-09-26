@@ -15,4 +15,5 @@
     <dimen name="s12">12dp</dimen>
     <dimen name="s20">20dp</dimen>
     <dimen name="s24">24dp</dimen>
+    <dimen name="s48">48dp</dimen>
 </resources>
