@@ -59,6 +59,7 @@ class CDashboardFragment : Fragment(), CCallback {
         userPreferences = UserPreferences(requireContext())
         viewModel = ViewModelProvider(this).get(CDashboardViewModel::class.java)
 
+
         binding.apply {
             ivLogout.setOnClickListener {
                 lifecycleScope.launch {
