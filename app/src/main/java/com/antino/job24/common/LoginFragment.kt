@@ -43,10 +43,10 @@ class LoginFragment : Fragment() {
 
         binding.apply {
             txtSignup.setOnClickListener {
-                Navigation.findNavController(btnSubmit)
+                Navigation.findNavController(loginBtn)
                     .navigate(R.id.nav_Register)
             }
-            btnSubmit.setOnClickListener {
+            loginBtn.setOnClickListener {
                 validate()
             }
         }
@@ -93,10 +93,10 @@ class LoginFragment : Fragment() {
                                         userPreferences!!.saverole(it.data.userRole ?: -1)
 
                                         if (it.data.userRole ?: -1 == 0)
-                                            Navigation.findNavController(btnSubmit)
+                                            Navigation.findNavController(loginBtn)
                                                 .navigate(R.id.action_nav_login_to_nav_rdashboard)
                                         else if (it.data.userRole ?: -1 == 1)
-                                            Navigation.findNavController(btnSubmit)
+                                            Navigation.findNavController(loginBtn)
                                                 .navigate(R.id.action_nav_login_to_nav_cdashboard)
                                     }
                                 }

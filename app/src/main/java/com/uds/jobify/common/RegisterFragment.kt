@@ -11,11 +11,11 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.Navigation
-import com.uds.jobify.R
+import com.antino.job24.R
+import com.antino.job24.databinding.FragmentRegisterBinding
 import com.uds.jobify.common.utils.CustomLoadingDialog
 import com.uds.jobify.common.utils.UserPreferences
 import com.uds.jobify.common.viewModel.CommonViewModel
-import com.uds.jobify.databinding.FragmentRegisterBinding
 import kotlinx.coroutines.launch
 
 

@@ -10,11 +10,11 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.Navigation
-import com.uds.jobify.R
+import com.antino.job24.R
+import com.antino.job24.databinding.FragmentLoginBinding
 import com.uds.jobify.common.utils.CustomLoadingDialog
 import com.uds.jobify.common.utils.UserPreferences
 import com.uds.jobify.common.viewModel.CommonViewModel
-import com.uds.jobify.databinding.FragmentLoginBinding
 import kotlinx.coroutines.launch
 
 class LoginFragment : Fragment() {
@@ -41,7 +41,7 @@ class LoginFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(CommonViewModel::class.java)
 
         binding.apply {
-            tvRegister.setOnClickListener { Navigation.findNavController(tvRegister).navigate(R.id.nav_Register) }
+            txtSignup.setOnClickListener { Navigation.findNavController(txtSignup).navigate(R.id.nav_Register) }
             loginBtn.setOnClickListener {
                 validate()
             }

@@ -7,9 +7,9 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.Navigation
-import com.uds.jobify.R
+import com.antino.job24.R
+import com.antino.job24.databinding.FragmentSplashBinding
 import com.uds.jobify.common.utils.UserPreferences
-import com.uds.jobify.databinding.FragmentSplashBinding
 import kotlinx.coroutines.flow.buffer
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
